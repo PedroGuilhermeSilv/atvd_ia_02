@@ -31,4 +31,4 @@ Em resumo, a busca em largura é uma técnica poderosa e versátil em inteligên
     - Caso contrário, marca o estado como visitado, obtém os vizinhos não visitados desse estado e os adiciona à fila com o caminho atualizado.
     - Se a fila se esvaziar sem encontrar o objetivo, retorna None.
 
-![Fluxograma](./img/image.png)  
+![Fluxograma](./img/image2.png)  
