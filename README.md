@@ -71,21 +71,21 @@ else:
 
 ```
 ## Classe Ambiente:
-    - Esta classe representa o ambiente onde o agente opera, neste caso, um grafo.
-    - __init__(self, grafo): O construtor recebe o grafo como entrada e o armazena para uso posterior.
-    - get_vizinhos(self, estado): Retorna os vizinhos de um estado específico no grafo.
+- Esta classe representa o ambiente onde o agente opera, neste caso, um grafo.
+- __init__(self, grafo): O construtor recebe o grafo como entrada e o armazena para uso posterior.
+- get_vizinhos(self, estado): Retorna os vizinhos de um estado específico no grafo.
 
 ![Grafo](./img/image.png)
 
 ## Classe Agente:
-    - A classe Agente é responsável por encontrar um caminho do estado inicial para o estado objetivo no ambiente (grafo).
-    - __init__(self, ambiente, estado_inicial, objetivo): O construtor recebe uma instância da classe Ambiente, um estado inicial e um estado objetivo para o agente encontrar.
-    - buscar_objetivo(self): Este método implementa a busca em largura para encontrar um caminho do estado inicial para o estado objetivo no grafo.
+- A classe Agente é responsável por encontrar um caminho do estado inicial para o estado objetivo no ambiente (grafo).
+- __init__(self, ambiente, estado_inicial, objetivo): O construtor recebe uma instância da classe Ambiente, um estado inicial e um estado objetivo para o agente encontrar.
+- buscar_objetivo(self): Este método implementa a busca em largura para encontrar um caminho do estado inicial para o estado objetivo no grafo.
 
 ## Uso do deque:
-    - O deque é uma estrutura de dados de fila de dupla extremidade.
-    - Foi utilizado para manter a ordem de inserção e remoção eficientes, especialmente para operações de popleft(), que são cruciais para o algoritmo de busca em largura.
-    - Em vez de usar uma lista padrão para implementar a fila, o deque é preferido devido à sua eficiência em inserções e remoções em ambas as extremidades.
+- O deque é uma estrutura de dados de fila de dupla extremidade.
+- Foi utilizado para manter a ordem de inserção e remoção eficientes, especialmente para operações de popleft(), que são cruciais para o algoritmo de busca em largura.
+- Em vez de usar uma lista padrão para implementar a fila, o deque é preferido devido à sua eficiência em inserções e remoções em ambas as extremidades.
 
 
 ![Fluxograma](./img/image2.png)  
