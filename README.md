@@ -71,17 +71,21 @@ else:
 
 ```
 ## Classe Ambiente:
-- A classe Ambiente representa o grafo no qual a busca será realizada.
-    - O método __init__ inicializa o ambiente com o grafo fornecido como entrada.
-    - O método get_vizinhos retorna uma lista de vizinhos de um estado dado.
+    - Esta classe representa o ambiente onde o agente opera, neste caso, um grafo.
+    - __init__(self, grafo): O construtor recebe o grafo como entrada e o armazena para uso posterior.
+    - get_vizinhos(self, estado): Retorna os vizinhos de um estado específico no grafo.
+
+![Grafo](./img/image.png)
+
 ## Classe Agente:
-- A classe Agente representa o agente que executa a busca em largura.
-    - O método __init__ inicializa o agente com o ambiente, o estado inicial e o estado objetivo.
-    - O método buscar_objetivo executa a busca em largura.
-    - Ele usa uma fila para armazenar os estados a serem explorados, juntamente com o caminho até esse estado.
-    - Enquanto a fila não estiver vazia, o algoritmo retira o primeiro estado da fila.
-    - Se o estado atual for o objetivo, retorna o caminho até esse estado.
-    - Caso contrário, marca o estado como visitado, obtém os vizinhos não visitados desse estado e os adiciona à fila com o caminho atualizado.
-    - Se a fila se esvaziar sem encontrar o objetivo, retorna None.
+    - A classe Agente é responsável por encontrar um caminho do estado inicial para o estado objetivo no ambiente (grafo).
+    - __init__(self, ambiente, estado_inicial, objetivo): O construtor recebe uma instância da classe Ambiente, um estado inicial e um estado objetivo para o agente encontrar.
+    - buscar_objetivo(self): Este método implementa a busca em largura para encontrar um caminho do estado inicial para o estado objetivo no grafo.
+
+## Uso do deque:
+    - O deque é uma estrutura de dados de fila de dupla extremidade.
+    - Foi utilizado para manter a ordem de inserção e remoção eficientes, especialmente para operações de popleft(), que são cruciais para o algoritmo de busca em largura.
+    - Em vez de usar uma lista padrão para implementar a fila, o deque é preferido devido à sua eficiência em inserções e remoções em ambas as extremidades.
+
 
 ![Fluxograma](./img/image2.png)  
